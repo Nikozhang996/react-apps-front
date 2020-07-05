@@ -1,0 +1,13 @@
+{
+  "name": "react-typescript-music",
+  "version": "1.0.0",
+  "description": "基于React配合TypeScript搭建的WEB APP",
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn start",
+    "build": "yarn build"
+  },
+  "keywords": ["react","typescript","music"],
+  "author": "Niko Zhang",
+  "license": "ISC"
+}
