@@ -7,7 +7,8 @@
     "dev:build": "webpack --env.development --config ./build/webpack.base.js",
     "dev": "webpack-dev-server --env.development --config ./build/webpack.base.js",
     "build": "webpack --env.production --config ./build/webpack.base.js",
-    "build:dll": "webpack --config ./build/webpack.dll.js"
+    "build:dll": "webpack --config ./build/webpack.dll.js",
+    "precommit": "node -v"
   },
   "keywords": [
     "react",
