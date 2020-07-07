@@ -11,7 +11,7 @@ const happyThreadPool = HappyPack.ThreadPool({size: os.cpus().length});
 
 module.exports = function (env) {
     const isDevelopment = env.development;
-    // const isProduction = env.production;
+    const isProduction = env.production;
 
     const BASE_CONFIG = {
         entry: path.resolve(__dirname, "../src/index.tsx"),
@@ -120,7 +120,15 @@ module.exports = function (env) {
         },
         plugins: [
             new CleanWebpackPlugin(),
-            new HtmlWebpackPlugin({}),
+            new HtmlWebpackPlugin({
+                template: path.resolve(__dirname, "../public/index.html"),
+                title: "hello webpack",
+                filename: "index.html",
+                minify: isProduction && {
+                    removeAttributeQuotes: true,
+                    collapseWhitespace: true,
+                },
+            }),
             new HappyPack({
                 id: "handleBabelPack",
                 //共享进程池
