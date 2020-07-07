@@ -20,7 +20,7 @@ module.exports = function (env) {
             path: path.resolve(__dirname, '../dist')
         },
         resolve: {
-            extensions: [".js", ".json", "ts"],
+            extensions: ['.ts', '.tsx', '.js', '.json']
         },
         externals: {
             // jquery: "$",
@@ -30,7 +30,7 @@ module.exports = function (env) {
                 {
                     // 解析js文件 默认会调用@babel/core
                     //把对.js 的文件处理交给id为happyBabel 的HappyPack 的实例执行
-                    test: /\.(ts|js)x?$/,
+                    test: /\.(ts|js|tsx|jsx)$/,
                     use: "happypack/loader?id=handleBabelPack",
                     exclude: /node_modules/,
                 },

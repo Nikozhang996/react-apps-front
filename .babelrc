@@ -1,7 +1,3 @@
-/*
- * Plugin会运行在Preset之前
- * Plugin 会从第一个开始顺序执行，Preset则是相反的
- */
 {
   "presets": [
     [
@@ -9,7 +5,7 @@
       {
         // 使用的api 会自动转化，并且是按需加载
         "useBuiltIns": "usage",
-        // 使用core-js代替babel-polyfill
+        // babel-polyfill
         "corejs": 3
       }
     ],
@@ -23,20 +19,9 @@
   ],
   "plugins": [
     // 解析装饰器
-    [
-      "@babel/plugin-proposal-decorators",
-      {
-        "legacy": true
-      }
-    ],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
     // 解析类的属性
-    [
-      "@babel/plugin-proposal-class-properties",
-      {
-        "loose": true
-      }
-    ],
-    // 使用transform-runtime A plugin that enables the re-use of Babel's injected helper code to save on codesize.可以帮我们节省代码
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
     "@babel/plugin-transform-runtime"
   ]
 }

@@ -1,12 +1,14 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-// import Hello from "./components/Hello";
+import App from "./App";
+//
+//
 
 ReactDOM.render(
-  // <Hello name="TypeScript" age={10} />,
-  <h1>adsf</h1>,
-  document.getElementById("root") as HTMLElement
+  <App />,
+  // React.createElement(App),
+  document.getElementById("app") as HTMLElement
 );
 
 if (module.hot) {
