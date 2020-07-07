@@ -1,12 +1,12 @@
 import * as React from "react";
 
 export interface HelloProps {
-  compiler: string;
-  framework: string;
+  name: string;
+  age: number;
 }
 
-export const Hello = (props: HelloProps) => (
-  <h1>
-    Hello from {props.compiler} and {props.framework}!
-  </h1>
-);
+export default function (props: HelloProps) {
+    return <h1>
+        Hello from {props.name} and {props.age}!
+    </h1>
+};

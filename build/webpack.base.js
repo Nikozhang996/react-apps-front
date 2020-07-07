@@ -14,7 +14,7 @@ module.exports = function (env) {
     // const isProduction = env.production;
 
     const BASE_CONFIG = {
-        entry: path.resolve(__dirname, "../src/index.js"),
+        entry: path.resolve(__dirname, "../src/index.tsx"),
         output: {
             filename: "bundle.js",
             path: path.resolve(__dirname, '../dist')
@@ -29,14 +29,9 @@ module.exports = function (env) {
             rules: [
                 {
                     // 解析js文件 默认会调用@babel/core
-                    test: /\.tsx?$/,
-                    use: "happypack/loader?id=handleBabelPack",
-                    exclude: /node_modules/,
-                },
-                {
-                    test: /\.js$/,
-                    use: "happypack/loader?id=handleBabelPack",
                     //把对.js 的文件处理交给id为happyBabel 的HappyPack 的实例执行
+                    test: /\.(ts|js)x?$/,
+                    use: "happypack/loader?id=handleBabelPack",
                     exclude: /node_modules/,
                 },
                 {
