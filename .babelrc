@@ -1,27 +1,4 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        // 使用的api 会自动转化，并且是按需加载
-        "useBuiltIns": "usage",
-        // babel-polyfill
-        "corejs": 3
-      }
-    ],
-    "@babel/preset-react",
-    [
-      "@babel/preset-typescript",
-      {
-        "allExtensions": true
-      }
-    ]
-  ],
-  "plugins": [
-    // 解析装饰器
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    // 解析类的属性
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    "@babel/plugin-transform-runtime"
-  ]
+  "presets": ["@babel/preset-env", "@babel/react", "@babel/preset-typescript"],
+  "plugins": ["@babel/plugin-proposal-class-properties"]
 }

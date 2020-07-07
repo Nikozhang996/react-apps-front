@@ -6,7 +6,7 @@ import App from "./App";
 //
 
 ReactDOM.render(
-  <App />,
+  <App name="vladimir" age={20} />,
   // React.createElement(App),
   document.getElementById("app") as HTMLElement
 );

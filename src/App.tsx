@@ -1,5 +1,9 @@
 import * as React from "react";
 
-export default function () {
-    return <h1>Hello</h1>
-};
+interface Props {
+  name: string;
+  age: number;
+}
+export default function (props:Props) {
+  return <h1>Hello {props.name},{props.age}</h1>;
+}
