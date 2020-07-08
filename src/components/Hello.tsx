@@ -1,4 +1,5 @@
 import * as React from "react";
+import './style.scss';
 
 export interface HelloProps {
   name: string;
@@ -6,7 +7,7 @@ export interface HelloProps {
 }
 
 export default function (props: HelloProps) {
-    return <h1>
+    return <p className="title">
         Hello from {props.name} and {props.age}!
-    </h1>
+    </p>
 };

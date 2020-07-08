@@ -1,9 +1,10 @@
-import * as React from "react";
+import React from "react";
+import Hello from "./components/Hello";
 
-interface Props {
-  name: string;
-  age: number;
-}
-export default function (props:Props) {
-  return <h1>Hello {props.name},{props.age}</h1>;
+export default function () {
+  return (
+    <div>
+      <Hello name={"sdf"} age={20} />
+    </div>
+  );
 }
