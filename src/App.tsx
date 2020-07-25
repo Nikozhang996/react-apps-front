@@ -77,7 +77,7 @@ const tableData: Array<ITableData> = [
 export default function () {
   return (
     <div>
-      <MyTable data={tableData} columns={tableColumns} border={true}/>
+      <MyTable data={tableData} columns={tableColumns} border={true} />
     </div>
   );
 }
