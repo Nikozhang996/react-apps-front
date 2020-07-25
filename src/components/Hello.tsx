@@ -1,12 +1,13 @@
 import * as React from "react";
+import './style.scss';
 
 export interface HelloProps {
-  compiler: string;
-  framework: string;
+  name: string;
+  age: number;
 }
 
-export const Hello = (props: HelloProps) => (
-  <h1>
-    Hello from {props.compiler} and {props.framework}!
-  </h1>
-);
+export default function (props: HelloProps) {
+    return <p className="title">
+        Hello from {props.name} and {props.age}!
+    </p>
+};

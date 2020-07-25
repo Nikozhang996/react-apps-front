@@ -1,9 +1,12 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 
-// import Hello from "./components/Hello";
+import App from "./App";
 
-ReactDOM.render(<h1>adf</h1>, app);
+ReactDOM.render(
+  <App name="vladimir" age={20} />,
+  document.getElementById("app") as HTMLElement
+);
 
 if (module.hot) {
   // 当入口文件变化后重新执行当前入口文件
