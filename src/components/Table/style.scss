@@ -1,0 +1,19 @@
+.table-wrap {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-header-tr,
+.table-body-tr {
+  .table-header-th,
+  .table-body-td {
+    &.border {
+      border: 1px solid #ddd;
+    }
+  }
+
+  &.center {
+    text-align: center;
+  }
+}

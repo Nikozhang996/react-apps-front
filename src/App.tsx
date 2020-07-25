@@ -1,7 +1,8 @@
 import React from "react";
-import MyTable from "./components/Table";
+import MyTable from "./components/Table/Table";
+import { ITableData, ITableColumn } from "./components/Table/interface";
 
-const tableColumns: Array<Object> = [
+const tableColumns: Array<ITableColumn> = [
   {
     title: "Name",
     key: "name",
@@ -15,7 +16,7 @@ const tableColumns: Array<Object> = [
     key: "address",
   },
 ];
-const tableData: Array<Object> = [
+const tableData: Array<ITableData> = [
   {
     id: 1,
     name: "John Brown",
@@ -76,7 +77,7 @@ const tableData: Array<Object> = [
 export default function () {
   return (
     <div>
-      <MyTable data={tableData} columns={tableColumns} />
+      <MyTable data={tableData} columns={tableColumns} border={true}/>
     </div>
   );
 }
