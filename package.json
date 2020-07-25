@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --env.development --config ./build/webpack.base.js",
     "build": "webpack --env.production --config ./build/webpack.base.js",
     "build:dll": "webpack --config ./build/webpack.dll.js",
-    "precommit": "node -v"
+    "precommit": "lint-staged -q"
   },
   "keywords": [
     "react",
@@ -42,7 +42,6 @@
     "glob": "^7.1.6",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^4.0.4",
-    "husky": "^4.2.5",
     "image-webpack-loader": "^6.0.0",
     "lint-staged": "^10.2.11",
     "mini-css-extract-plugin": "^0.9.0",
