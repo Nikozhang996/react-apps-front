@@ -45,6 +45,7 @@ export default function (props: IProps) {
                     key={column.key}
                   >
                     {row[column.key]}
+                    {/* {(row as any)[column.key]} */}
                   </td>
                 );
               })}

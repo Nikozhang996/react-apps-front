@@ -4,6 +4,7 @@ export interface ITableData {
   age: string | number;
   address: string | number;
   date: string | number;
+  [key: string]: any;
 }
 
 export interface ITableColumn {
