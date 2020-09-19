@@ -1,3 +1,3 @@
 # react-typescript-music
 
-React框架生态app集合
+React 框架生态 app 集合

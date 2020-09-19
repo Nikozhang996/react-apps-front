@@ -20,7 +20,9 @@ export default function Ref() {
   return (
     <section>
       <FancyInput ref={inputRef} placeholder="abc" />
+
       <hr />
+
       <button
         style={{ display: "inline-block" }}
         onClick={() => {
