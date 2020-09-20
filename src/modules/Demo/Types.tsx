@@ -1,4 +1,4 @@
-/* 
+/*
 https://juejin.im/post/6844904175831089165
 */
 import React, { Component, useState } from "react";
@@ -16,7 +16,6 @@ class Types extends Component<IProps, IState> {
   state = {
     count: 0,
   };
-  componentDidMount() {}
 
   render() {
     return <div>class components {this.props.value}</div>;
@@ -24,7 +23,17 @@ class Types extends Component<IProps, IState> {
 }
 
 const Fc: React.FC<IProps> = function (props) {
-  return <div>function components {props.value}</div>;
+  const [count, setCount] = useState<number | string>(0);
+
+  setTimeout(function () {
+    setCount(100);
+  }, 1000);
+
+  return (
+    <div>
+      function components {props.value}-{count}
+    </div>
+  );
 };
 
 function FunctionComponentTwo(props: IProps) {
@@ -39,11 +48,6 @@ function FunctionComponentTwo(props: IProps) {
 }
 
 export default function App() {
-  const [count, setCount] = useState<number | string>(0);
-
-  setCount("hello");
-
-  console.log(count);
   return (
     <section>
       <Types value={2 ** 10} />
