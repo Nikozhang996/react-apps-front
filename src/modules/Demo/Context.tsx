@@ -2,10 +2,27 @@
 https://www.cnblogs.com/Wayou/p/react_typescript_forwardref.html
 */
 
-import React, {  Provider, Consumer } from "react";
+import React, {createContext} from "react";
 
+interface IContext {
+  a: string;
+  b: string|number;
+}
+
+const ThemeContext = createContext<IContext>({});
+const {Provider, Consumer} = ThemeContext;
+
+class A extends React.Component<any, any>{
+  static contextType = ThemeContext;
+
+  render() {
+    return <span>{this.context.a}</span>
+  }
+}
 
 export default function Context() {
-  return <section>
-  </section>;
+  return <Provider value={{a:'物是人非啊', b: 123}}>
+    <A/>
+    {/*{TestContext}*/}
+  </Provider>;
 }
