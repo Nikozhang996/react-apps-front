@@ -1,7 +1,7 @@
 import React, {ReactChild, ReactChildren} from "react";
 
 interface IChild {
-  children: ReactChildren;
+  children?: ReactChildren;
 }
 
 function Child(props: IChild) {
@@ -12,6 +12,8 @@ function Child(props: IChild) {
     </div>
   );
 }
+
+
 
 interface IChildWithName {
   top: Function;
