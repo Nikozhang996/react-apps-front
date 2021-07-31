@@ -1,6 +1,4 @@
 # Ignore artifacts:
-build
-coverage
+.idea
 
 # Ignore all HTML files:
-*.html

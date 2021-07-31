@@ -1,4 +1,4 @@
-import React, {ReactChild, ReactChildren} from "react";
+import React, { ReactChild, ReactChildren } from "react";
 
 interface IChild {
   children?: ReactChildren;
@@ -12,8 +12,6 @@ function Child(props: IChild) {
     </div>
   );
 }
-
-
 
 interface IChildWithName {
   top: Function;

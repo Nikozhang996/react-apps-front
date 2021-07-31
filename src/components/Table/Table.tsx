@@ -18,13 +18,7 @@ export default function (props: IProps) {
         <tr className={"table-header-tr"}>
           {tableColumns.map((column: ITableColumn) => {
             return (
-              <th
-                className={[
-                  "table-header-th",
-                  props.border ? "border" : "",
-                ].join(" ")}
-                key={column.key}
-              >
+              <th className={["table-header-th", props.border ? "border" : ""].join(" ")} key={column.key}>
                 {column.title}
               </th>
             );
@@ -37,13 +31,7 @@ export default function (props: IProps) {
             <tr className={"table-body-tr"} key={row.id}>
               {tableColumns.map((column: ITableColumn) => {
                 return (
-                  <td
-                    className={[
-                      "table-body-td",
-                      props.border ? "border" : "",
-                    ].join(" ")}
-                    key={column.key}
-                  >
+                  <td className={["table-body-td", props.border ? "border" : ""].join(" ")} key={column.key}>
                     {row[column.key]}
                     {/* {(row as any)[column.key]} */}
                   </td>
