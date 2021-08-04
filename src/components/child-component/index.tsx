@@ -5,7 +5,7 @@ export interface IProps extends Props<FC> {
 }
 
 const ChildComponent = (props: IProps): JSX.Element => {
-  console.log(props);
+  // console.log(props);
 
   return (
     <section>

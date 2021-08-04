@@ -27,7 +27,7 @@ const Ref: FC = () => {
   const timer = useRef<NodeJS.Timeout>();
   useEffect(() => {
     timer.current = setInterval(() => {
-      setValue(() => valueRef.current += 1);
+      // setValue(() => (valueRef.current += 1));
     }, 1000);
 
     return function () {
@@ -38,10 +38,24 @@ const Ref: FC = () => {
     if (value === 20) clearInterval(timer.current!);
   }, [value]);
 
-  const increment = useCallback(() => {    
-    setValue((value) => value + 1);
-    setChildValue((value) => value + 1);
-  }, []);
+  function debounce(fn: Function, delay: number) {
+    let timer: NodeJS.Timeout | number = 0;
+    return function () {
+      clearTimeout(timer);
+      let self = this;
+      timer = setTimeout(function () {
+        fn.apply(self, arguments);
+      }, delay);
+    };
+  }
+
+  const increment = useCallback(
+    debounce(() => {
+      setValue((value) => value + 1);
+      setChildValue((value) => value + 1);
+    }, 300),
+    []
+  );
 
   const decrement = useCallback(() => {
     setValue((value) => value - 1);
