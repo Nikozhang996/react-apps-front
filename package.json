@@ -18,10 +18,13 @@
   "author": "Niko Zhang",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.172",
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
+    "lodash": "^4.17.21",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "react-router": "^5.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
@@ -30,6 +33,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/react-router": "^5.1.16",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
@@ -49,6 +53,7 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "file-loader": "^6.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "glob": "^7.1.6",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^4.0.4",

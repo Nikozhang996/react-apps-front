@@ -27,18 +27,15 @@ const Ref: FC = () => {
   const timer = useRef<NodeJS.Timeout>();
   useEffect(() => {
     timer.current = setInterval(() => {
-      setValue(() => valueRef.current += 1);
+      setValue(() => (valueRef.current += 1));
     }, 1000);
 
     return function () {
       clearInterval(timer.current!);
     };
   }, []);
-  useEffect(() => {
-    if (value === 20) clearInterval(timer.current!);
-  }, [value]);
 
-  const increment = useCallback(() => {    
+  const increment = useCallback(() => {
     setValue((value) => value + 1);
     setChildValue((value) => value + 1);
   }, []);

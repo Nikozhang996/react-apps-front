@@ -8,6 +8,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HappyPack = require("happypack");
 const os = require("os");
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
+const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 
 module.exports = function (env) {
   const isDevelopment = env.development;
@@ -137,6 +138,7 @@ module.exports = function (env) {
         verbose: true,
         loaders: ["babel-loader"],
       }),
+      new FriendlyErrorsWebpackPlugin(),
     ].filter(Boolean),
   };
 

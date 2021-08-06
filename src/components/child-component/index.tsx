@@ -5,8 +5,6 @@ export interface IProps extends Props<FC> {
 }
 
 const ChildComponent = (props: IProps): JSX.Element => {
-  console.log(props);
-
   return (
     <section>
       {props.children}:{props.value}

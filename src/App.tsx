@@ -1,4 +1,6 @@
 import React from "react";
+import './styles/index.scss'
+
 import MyTable from "./components/Table/Table";
 import JianShuIndex from "./modules/JianShu/JianShuIndex";
 import Ref from "./modules/Demo/Ref";

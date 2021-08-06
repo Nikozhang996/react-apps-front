@@ -11,10 +11,9 @@ module.exports = {
     port: 4000,
     compress: true,
     hot: true,
+    quiet: true,
+    stats: "errors-only",
     contentBase: path.resolve(__dirname, "../dist"),
-    after(app) {
-      // app is a EventEmitter
-    },
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
