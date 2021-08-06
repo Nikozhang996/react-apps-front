@@ -12,6 +12,7 @@ module.exports = {
     compress: true,
     hot: true,
     quiet: true,
+    historyApiFallback: true,
     stats: "errors-only",
     contentBase: path.resolve(__dirname, "../dist"),
   },
