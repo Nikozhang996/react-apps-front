@@ -6,7 +6,7 @@ import { useState } from "react";
 // interface
 import { ITableData, IProps, ITableColumn } from "./interface";
 // style
-import "./style.scss";
+import "./index.scss";
 
 export default function (props: IProps) {
   const [tableData, setTableData] = useState(props.data);
