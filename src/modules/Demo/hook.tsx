@@ -13,8 +13,6 @@ import React, {
   useCallback,
 } from "react";
 
-import ChildComponent from "../../components/child-component";
-
 const FancyInput = React.forwardRef<HTMLInputElement, any>((props, ref) => {
   return <input type="text" ref={ref} className="fancy-input" {...props} />;
 });
@@ -47,7 +45,6 @@ const Ref: FC = () => {
 
   return (
     <section>
-      <ChildComponent value={childValue}>子组件</ChildComponent>
       {/*{useMemo(<ChildComponent value={childValue}/>, [childValue])}*/}
       {/*<FancyInput ref={inputRef} placeholder="abc" />*/}
       <span>{value}</span>

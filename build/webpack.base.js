@@ -18,6 +18,7 @@ module.exports = function (env) {
     entry: path.resolve(__dirname, "../src/index.tsx"),
     output: {
       filename: "bundle.js",
+      publicPath: "/",
       path: path.resolve(__dirname, "../dist"),
     },
     resolve: {
