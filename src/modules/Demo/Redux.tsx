@@ -1,29 +1,10 @@
-/* 
-https://www.cnblogs.com/Wayou/p/react_typescript_forwardref.html
-*/
-import React, { useState, useRef, createRef, forwardRef, InputHTMLAttributes } from "react";
+import React from "react";
+import { BrowserRouterProps } from "react-router-dom";
 
-const FancyInput = React.forwardRef<HTMLInputElement, any>((props, ref) => {
-  return <input type="text" ref={ref} className="fancy-input" {...props} />;
-});
+interface IProps extends BrowserRouterProps {}
 
-export default function Ref() {
-  const [inputRef, setInputRef] = useState(createRef<HTMLInputElement>());
+const Loading: React.FC<IProps> = function (props) {
+  return <section>loading……</section>;
+};
 
-  return (
-    <section>
-      <FancyInput ref={inputRef} placeholder="abc" />
-      <hr />
-      <button
-        style={{ display: "inline-block" }}
-        onClick={() => {
-          if (inputRef.current) {
-            console.log(inputRef.current.value);
-          }
-        }}
-      >
-        按钮
-      </button>
-    </section>
-  );
-}
+export default Loading;

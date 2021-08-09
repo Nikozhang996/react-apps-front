@@ -1,9 +1,7 @@
 import React, { FC } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Music from "../modules/Music";
-import Lazy from "../modules/Demo/Lazy";
-import Loading from "../modules/Demo/loading";
-
+import { Loading, LifeCycle, Lazy } from "../modules/Demo";
 const Router: FC = () => {
   return (
     <BrowserRouter>
@@ -13,6 +11,7 @@ const Router: FC = () => {
           <Switch>
             <Route exact={true} path="/demo/lazy" component={Lazy} />
             <Route exact={true} path="/demo/loading" component={Loading} />
+            <Route exact={true} path="/demo/life-cycle" component={LifeCycle} />
             <Redirect to="/demo/loading" />
           </Switch>
         </Route>
