@@ -1,17 +1,15 @@
-import React, { ReactChild, ReactChildren } from "react";
+import React, { FC } from "react";
 
-interface IChild {
-  children?: ReactChildren;
-}
+interface IProps {}
 
-function Child(props: IChild) {
+const Child: FC<IProps> = (props) => {
   return (
     <div>
       <h3>children</h3>
       {props.children}
     </div>
   );
-}
+};
 
 interface IChildWithName {
   top: Function;
@@ -28,7 +26,7 @@ function ChildWithName(props: IChildWithName) {
   );
 }
 
-export default function Slot() {
+const Slot: FC<IProps> = () => {
   return (
     <div>
       <Child>
@@ -49,4 +47,6 @@ export default function Slot() {
       />
     </div>
   );
-}
+};
+
+export default Slot;
