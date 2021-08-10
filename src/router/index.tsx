@@ -1,12 +1,14 @@
 import React, { FC } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Music from "../modules/Music";
+import Login from "../modules/login";
 import { Loading, LifeCycle, Lazy } from "../modules/Demo";
 const Router: FC = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact={true} path="/music" component={Music} />
+        <Route exact={true} path="/login" component={Login} />
         <Route path="/demo">
           <Switch>
             <Route exact={true} path="/demo/lazy" component={Lazy} />
