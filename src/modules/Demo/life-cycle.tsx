@@ -39,6 +39,11 @@ export default class LifeCycle extends Component<IProps, IState> {
     return this.state.name !== nextState.name;
   }
 
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.log(error);
+    console.log(errorInfo);
+  }
+
   handleSubmit = () => {
     const { inputRef } = this.state;
     this.setState({
@@ -47,13 +52,13 @@ export default class LifeCycle extends Component<IProps, IState> {
   };
 
   render() {
-    console.log("render");
-
     return (
       <section>
         <form>
-          <label title="input">name</label>
-          <input ref={this.state.inputRef} type="text" placeholder="please input name" />
+          <label title="input">
+            name
+            <input ref={this.state.inputRef} type="text" placeholder="please input name" />
+          </label>
           <label>
             <button type="button" onClick={this.handleSubmit}>
               提交
@@ -62,7 +67,6 @@ export default class LifeCycle extends Component<IProps, IState> {
         </form>
 
         <hr />
-
         <strong>{this.state.name}</strong>
       </section>
     );
