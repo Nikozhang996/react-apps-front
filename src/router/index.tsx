@@ -1,3 +1,7 @@
+/*
+* https://segmentfault.com/a/1190000020812860
+* */
+
 import React, { FC } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Music from "../modules/Music";
