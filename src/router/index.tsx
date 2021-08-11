@@ -1,12 +1,12 @@
 /*
-* https://segmentfault.com/a/1190000020812860
-* */
+ * https://segmentfault.com/a/1190000020812860
+ * */
 
 import React, { FC } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Music from "../modules/Music";
 import Login from "../modules/login";
-import { Loading, LifeCycle, Lazy } from "../modules/Demo";
+import { Loading, LifeCycle, Lazy, PureComponentTest } from "../modules/Demo";
 const Router: FC = () => {
   return (
     <BrowserRouter>
@@ -18,6 +18,7 @@ const Router: FC = () => {
             <Route exact={true} path="/demo/lazy" component={Lazy} />
             <Route exact={true} path="/demo/loading" component={Loading} />
             <Route exact={true} path="/demo/life-cycle" component={LifeCycle} />
+            <Route exact={true} path="/demo/pure-component" component={PureComponentTest} />
             <Redirect to="/demo/loading" />
           </Switch>
         </Route>
